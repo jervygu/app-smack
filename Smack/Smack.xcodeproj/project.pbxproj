@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11214EC725F99B0B00143FD0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11214EC625F99B0B00143FD0 /* GradientView.swift */; };
 		11B423C325F8C36700921C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B423C225F8C36700921C80 /* AppDelegate.swift */; };
 		11B423C525F8C36700921C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B423C425F8C36700921C80 /* SceneDelegate.swift */; };
 		11B423CA25F8C36700921C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B423C825F8C36700921C80 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11214EC625F99B0B00143FD0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		11B423BF25F8C36700921C80 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B423C225F8C36700921C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B423C425F8C36700921C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		11D5E08B25F8E19200171AED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11214EC625F99B0B00143FD0 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				11D5E08E25F8E1C700171AED /* ChatVC.swift in Sources */,
 				11B423C325F8C36700921C80 /* AppDelegate.swift in Sources */,
+				11214EC725F99B0B00143FD0 /* GradientView.swift in Sources */,
 				11C98C4B25F8E60100C6EF4B /* SWRevealViewController.m in Sources */,
 				11B423C525F8C36700921C80 /* SceneDelegate.swift in Sources */,
 				11D5E09125F8E1DD00171AED /* ChannelVC.swift in Sources */,

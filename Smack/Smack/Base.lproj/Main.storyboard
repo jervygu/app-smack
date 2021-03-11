@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBw-oZ-8Um">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBw-oZ-8Um" customClass="GradientView" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="87"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-Dy-KLl">
@@ -69,7 +69,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PBw-oZ-8Um" firstAttribute="leading" secondItem="1jQ-uZ-m6C" secondAttribute="leading" id="Inb-Xb-3da"/>
-                            <constraint firstItem="PBw-oZ-8Um" firstAttribute="trailing" secondItem="1jQ-uZ-m6C" secondAttribute="trailing" id="sh2-lP-pGc"/>
+                            <constraint firstItem="PBw-oZ-8Um" firstAttribute="trailing" secondItem="2TQ-1P-NJ6" secondAttribute="trailing" id="sh2-lP-pGc"/>
                             <constraint firstItem="PBw-oZ-8Um" firstAttribute="top" secondItem="2TQ-1P-NJ6" secondAttribute="top" id="zBi-wK-kp3"/>
                         </constraints>
                     </view>
@@ -85,19 +85,73 @@
         <scene sceneID="L0o-Nn-1pX">
             <objects>
                 <viewController id="JvX-6p-EuP" customClass="ChannelVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eDI-NW-Aq4">
+                    <view key="view" contentMode="scaleToFill" id="eDI-NW-Aq4" customClass="GradientView" customModule="Smack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3z-LD-pTV">
+                                <rect key="frame" x="16.000000000000004" y="68" width="62.333333333333343" height="22.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANNELS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txF-Nh-G4P">
+                                <rect key="frame" x="16" y="110.66666666666667" width="65" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23D-JD-g16">
+                                <rect key="frame" x="286" y="106.66666666666667" width="22" height="22.000000000000014"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mEy-mc-I3K">
+                                <rect key="frame" x="16" y="735" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="LOT-ro-Nf6"/>
+                                    <constraint firstAttribute="height" constant="75" id="ZaR-eP-Uqj"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDo-iO-ObJ">
+                                <rect key="frame" x="0.0" y="148.66666666666669" width="390" height="566.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-fx-p39">
+                                <rect key="frame" x="111" y="756" width="46" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8GF-aX-v6d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uDM-fx-p39" firstAttribute="leading" secondItem="mEy-mc-I3K" secondAttribute="trailing" constant="20" id="01X-IE-ixO"/>
+                            <constraint firstItem="yDo-iO-ObJ" firstAttribute="trailing" secondItem="eDI-NW-Aq4" secondAttribute="trailing" id="4Jy-1Z-V3t"/>
+                            <constraint firstItem="8GF-aX-v6d" firstAttribute="trailing" secondItem="23D-JD-g16" secondAttribute="trailing" constant="82" id="5x8-Cc-TGK"/>
+                            <constraint firstItem="mEy-mc-I3K" firstAttribute="top" secondItem="yDo-iO-ObJ" secondAttribute="bottom" constant="20" id="7Fy-nf-e5H"/>
+                            <constraint firstItem="txF-Nh-G4P" firstAttribute="top" secondItem="D3z-LD-pTV" secondAttribute="bottom" constant="20" id="DTr-Ca-BFK"/>
+                            <constraint firstItem="txF-Nh-G4P" firstAttribute="leading" secondItem="8GF-aX-v6d" secondAttribute="leading" constant="16" id="NGf-3X-xJR"/>
+                            <constraint firstItem="23D-JD-g16" firstAttribute="centerY" secondItem="txF-Nh-G4P" secondAttribute="centerY" id="RlM-Bw-fvQ"/>
+                            <constraint firstItem="D3z-LD-pTV" firstAttribute="top" secondItem="8GF-aX-v6d" secondAttribute="top" constant="24" id="a0l-i7-xnp"/>
+                            <constraint firstItem="mEy-mc-I3K" firstAttribute="bottom" secondItem="8GF-aX-v6d" secondAttribute="bottom" id="daa-4A-gVd"/>
+                            <constraint firstItem="D3z-LD-pTV" firstAttribute="leading" secondItem="8GF-aX-v6d" secondAttribute="leading" constant="16" id="ksb-C7-3Lf"/>
+                            <constraint firstItem="mEy-mc-I3K" firstAttribute="leading" secondItem="8GF-aX-v6d" secondAttribute="leading" constant="16" id="kwo-EA-68Q"/>
+                            <constraint firstItem="yDo-iO-ObJ" firstAttribute="top" secondItem="23D-JD-g16" secondAttribute="bottom" constant="20" id="lcw-DF-4ft"/>
+                            <constraint firstItem="uDM-fx-p39" firstAttribute="centerY" secondItem="mEy-mc-I3K" secondAttribute="centerY" id="np1-yZ-QOb"/>
+                            <constraint firstItem="yDo-iO-ObJ" firstAttribute="leading" secondItem="eDI-NW-Aq4" secondAttribute="leading" id="yh7-ZV-sKx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dA-2h-jck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="-192"/>
+            <point key="canvasLocation" x="593.84615384615381" y="-192.65402843601896"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
