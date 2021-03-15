@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountVC: UIViewController {
     
@@ -24,6 +25,16 @@ class CreateAccountVC: UIViewController {
     
     
     @IBAction func createAccountPressed(_ sender: Any) {
+        
+        Auth.auth().createUser(withEmail: emailTxt.text!, password: passwordTxt.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                Database.database().reference()
+                print("Registration Successful!")
+            }
+        }
     }
     
     
