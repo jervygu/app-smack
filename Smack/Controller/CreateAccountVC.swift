@@ -10,7 +10,6 @@ import Firebase
 
 class CreateAccountVC: UIViewController {
     
-    @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
@@ -33,12 +32,14 @@ class CreateAccountVC: UIViewController {
             } else {
                 Database.database().reference()
                 print("Registration Successful!")
+                self.performSegue(withIdentifier: UNWIND, sender: nil)
             }
         }
     }
     
     
     @IBAction func pickAvataPressed(_ sender: Any) {
+        performSegue(withIdentifier: GO_TO_AVATAR, sender: nil)
     }
     
     @IBAction func pickBGColorPressed(_ sender: Any) {

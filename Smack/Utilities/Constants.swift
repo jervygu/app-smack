@@ -11,3 +11,4 @@ import Foundation
 let GO_TO_LOGIN = "goToLogin"
 let GO_TO_CREATEACCOUNT = "goToCreateAccount"
 let UNWIND = "unwindToChannel"
+let GO_TO_AVATAR = "goToAvatarPicker"
