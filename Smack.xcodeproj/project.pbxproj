@@ -14,6 +14,8 @@
 		116E5EC725FF5975009D5607 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 116E5EC625FF5975009D5607 /* GoogleService-Info.plist */; };
 		116E5ECA25FF6EBD009D5607 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5EC925FF6EBD009D5607 /* AvatarPickerVC.swift */; };
 		116E5ECD25FF70F7009D5607 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5ECC25FF70F7009D5607 /* AvatarCell.swift */; };
+		116E5ED125FF7E6E009D5607 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5ED025FF7E6E009D5607 /* AuthService.swift */; };
+		116E5ED425FF8146009D5607 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E5ED325FF8146009D5607 /* UserDataService.swift */; };
 		11B423C325F8C36700921C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B423C225F8C36700921C80 /* AppDelegate.swift */; };
 		11B423C525F8C36700921C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B423C425F8C36700921C80 /* SceneDelegate.swift */; };
 		11B423CA25F8C36700921C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B423C825F8C36700921C80 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		116E5EC625FF5975009D5607 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		116E5EC925FF6EBD009D5607 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		116E5ECC25FF70F7009D5607 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		116E5ED025FF7E6E009D5607 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		116E5ED325FF8146009D5607 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		11B423BF25F8C36700921C80 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B423C225F8C36700921C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B423C425F8C36700921C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		116E5ECF25FF7E56009D5607 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				116E5ED025FF7E6E009D5607 /* AuthService.swift */,
+				116E5ED325FF8146009D5607 /* UserDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		11B423B625F8C36700921C80 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 		11B423C125F8C36700921C80 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				116E5ECF25FF7E56009D5607 /* Services */,
 				11214EC925F9A96300143FD0 /* Utilities */,
 				11D5E06F25F8DAF000171AED /* Supporting Files */,
 				11D5E08C25F8E19900171AED /* Model */,
@@ -283,10 +297,12 @@
 			files = (
 				11D5E08E25F8E1C700171AED /* ChatVC.swift in Sources */,
 				11B8EE0625FF4C48006DB926 /* RoundedButton.swift in Sources */,
+				116E5ED425FF8146009D5607 /* UserDataService.swift in Sources */,
 				116E5ECA25FF6EBD009D5607 /* AvatarPickerVC.swift in Sources */,
 				11B423C325F8C36700921C80 /* AppDelegate.swift in Sources */,
 				11214ECF25F9B08E00143FD0 /* LoginVC.swift in Sources */,
 				11214EC725F99B0B00143FD0 /* GradientView.swift in Sources */,
+				116E5ED125FF7E6E009D5607 /* AuthService.swift in Sources */,
 				11C98C4B25F8E60100C6EF4B /* SWRevealViewController.m in Sources */,
 				11214ED225F9B31D00143FD0 /* CreateAccountVC.swift in Sources */,
 				11214ECB25F9A97400143FD0 /* Constants.swift in Sources */,
