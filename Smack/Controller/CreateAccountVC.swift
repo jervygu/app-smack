@@ -64,13 +64,13 @@ class CreateAccountVC: UIViewController {
                     if success {
                         AuthService.instance.loginUser(email: email, password: pass) { (success) in
                             if success {
-                                AuthService.instance.createUser(email: email, avatarName: self.avatarName, avatarColor: self.avatarColor) { (success) in
-                                    if success {
-                                        print(UserDataService.instance.name,
-                                              UserDataService.instance.avatarName)
-                                        
-                                        self.performSegue(withIdentifier: UNWIND, sender: nil)
-                                    }
+                                 
+                                AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor) { (success) in
+                                    
+                                    print(UserDataService.instance.name,
+                                          UserDataService.instance.avatarName)
+                                    
+                                    self.performSegue(withIdentifier: UNWIND, sender: nil)
                                 }
                             }
                         }

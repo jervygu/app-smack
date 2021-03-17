@@ -47,12 +47,15 @@ class AuthService {
         
         // need firebase saving code
         
+        
+        
     }
     
     func loginUser(email: String, password: String, completion: @escaping CompletionHandler) {
         
         // need firebase saving code
         let lowerCasedEmail = email.lowercased()
+        
         
     }
     
@@ -62,6 +65,8 @@ class AuthService {
         
         
         // need firebase saving code
+        
+        
         
     }
     

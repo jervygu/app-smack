@@ -31,7 +31,7 @@
         <scene sceneID="MIp-tS-rv2">
             <objects>
                 <viewController id="TIC-HX-zER" customClass="ChatVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2TQ-1P-NJ6">
+                    <view key="view" contentMode="scaleToFill" id="2TQ-1P-NJ6" customClass="GradientView" customModule="Smack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -64,17 +64,74 @@
                                     <constraint firstItem="nHZ-hW-u3B" firstAttribute="centerX" secondItem="PBw-oZ-8Um" secondAttribute="centerX" id="uG0-6h-PmO"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RoB-zd-G0t">
+                                <rect key="frame" x="0.0" y="87" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="Alx-N2-8k3">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Alx-N2-8k3" id="wfa-PR-g1S">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDc-Tc-dSw" customClass="GradientView" customModule="Smack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="760" width="390" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-OB-KpY">
+                                        <rect key="frame" x="8" y="8" width="336" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="ZhU-SE-dXb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFX-je-HfG">
+                                        <rect key="frame" x="352" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QaW-Py-Rot"/>
+                                            <constraint firstAttribute="width" constant="30" id="opk-I1-0tO"/>
+                                        </constraints>
+                                        <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="TIC-HX-zER" eventType="touchUpInside" id="PfU-Mr-cRL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Jt-ML-fT5"/>
+                                    <constraint firstAttribute="trailing" secondItem="zFX-je-HfG" secondAttribute="trailing" constant="8" id="3HT-2T-C8m"/>
+                                    <constraint firstItem="zFX-je-HfG" firstAttribute="leading" secondItem="WmK-OB-KpY" secondAttribute="trailing" constant="8" id="GAh-1W-ueF"/>
+                                    <constraint firstItem="WmK-OB-KpY" firstAttribute="top" secondItem="eDc-Tc-dSw" secondAttribute="top" constant="8" id="OcT-2a-D2f"/>
+                                    <constraint firstItem="zFX-je-HfG" firstAttribute="top" secondItem="eDc-Tc-dSw" secondAttribute="top" constant="10" id="fNc-Dr-fzk"/>
+                                    <constraint firstItem="WmK-OB-KpY" firstAttribute="leading" secondItem="eDc-Tc-dSw" secondAttribute="leading" constant="8" id="suA-Pq-DWM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1jQ-uZ-m6C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PBw-oZ-8Um" firstAttribute="leading" secondItem="1jQ-uZ-m6C" secondAttribute="leading" id="Inb-Xb-3da"/>
+                            <constraint firstItem="eDc-Tc-dSw" firstAttribute="leading" secondItem="1jQ-uZ-m6C" secondAttribute="leading" id="MWX-Fb-CO7"/>
+                            <constraint firstItem="RoB-zd-G0t" firstAttribute="trailing" secondItem="1jQ-uZ-m6C" secondAttribute="trailing" id="NCQ-8u-udM"/>
+                            <constraint firstItem="RoB-zd-G0t" firstAttribute="leading" secondItem="1jQ-uZ-m6C" secondAttribute="leading" id="aB5-sb-x0o"/>
+                            <constraint firstItem="eDc-Tc-dSw" firstAttribute="bottom" secondItem="1jQ-uZ-m6C" secondAttribute="bottom" id="awP-q6-IbJ"/>
+                            <constraint firstItem="eDc-Tc-dSw" firstAttribute="trailing" secondItem="1jQ-uZ-m6C" secondAttribute="trailing" id="j28-Tn-3s6"/>
+                            <constraint firstItem="RoB-zd-G0t" firstAttribute="top" secondItem="PBw-oZ-8Um" secondAttribute="bottom" id="jMC-O4-o9s"/>
                             <constraint firstItem="PBw-oZ-8Um" firstAttribute="trailing" secondItem="2TQ-1P-NJ6" secondAttribute="trailing" id="sh2-lP-pGc"/>
+                            <constraint firstItem="eDc-Tc-dSw" firstAttribute="top" secondItem="RoB-zd-G0t" secondAttribute="bottom" id="wy0-YG-lDg"/>
                             <constraint firstItem="PBw-oZ-8Um" firstAttribute="top" secondItem="2TQ-1P-NJ6" secondAttribute="top" id="zBi-wK-kp3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="heightCons" destination="2Jt-ML-fT5" id="zF6-wg-ukC"/>
                         <outlet property="menuBtn" destination="j4M-Dy-KLl" id="1hR-vh-h7x"/>
+                        <outlet property="messageTF" destination="WmK-OB-KpY" id="1Tj-cf-duY"/>
+                        <outlet property="messageTableView" destination="RoB-zd-G0t" id="pTt-6w-GjD"/>
+                        <outlet property="sendBtn" destination="zFX-je-HfG" id="ren-G2-BkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MR-9k-Lf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,9 +281,12 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="eLE-yv-ogt" eventType="touchUpInside" id="eTe-Ze-AF0"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Gqj-Ol-kFn" userLabel="Textfields Stack View">
                                 <rect key="frame" x="70" y="240" width="250" height="88"/>
@@ -302,10 +362,14 @@
                     <navigationItem key="navigationItem" id="DMg-cE-1n0"/>
                     <connections>
                         <outlet property="closeBtn" destination="Q1d-eu-Hq2" id="r5K-Nh-UGn"/>
+                        <outlet property="emailTF" destination="lo5-Td-jaR" id="EBZ-UC-Nc4"/>
+                        <outlet property="passwordTF" destination="l7p-zh-ke4" id="h51-bj-kcc"/>
                         <segue destination="XAe-af-Vko" kind="show" identifier="goToCreateAccount" id="CaX-4M-VZu"/>
+                        <segue destination="BXs-as-Bom" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="b9L-AD-x1i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWi-2I-DHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BXs-as-Bom" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1318" y="-193"/>
         </scene>
@@ -615,6 +679,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
